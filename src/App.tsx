@@ -1,7 +1,17 @@
 import { FC } from 'react'
+import { Route, Routes } from 'react-router-dom'
+
+import Layout from '@/components/layout/Layout'
+import Home from '@/components/screens/home/Home'
 
 const App: FC = () => {
-	return <h1 className='text-black'>Hello world!</h1>
+	return (
+		<Routes>
+			<Route path='/' element={<Layout />}>
+				<Route index element={<Home />} />
+			</Route>
+		</Routes>
+	)
 }
 
 export default App

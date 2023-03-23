@@ -2,7 +2,10 @@ const { default: plugin } = require('tailwindcss')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./src/**/*.{js,jsx,ts,tsx}'],
+	content: [
+		'./components/**/*.{js,ts,jsx,tsx}',
+		'./src/**/*.{ js, jsx, ts, tsx }'
+	],
 	theme: {
 		fontSize: {
 			'text-xs': '11px',
@@ -27,7 +30,7 @@ module.exports = {
 		extend: {}
 	},
 	plugins: [
-		require('@tailwindcss/forms'),
-		plugin(function ({ addUtilities }) {})
+		require('@tailwindcss/forms')
+		//plugin(function ({ addUtilities }) {})
 	]
 }

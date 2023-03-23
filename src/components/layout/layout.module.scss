@@ -1,0 +1,7 @@
+.layout {
+	@apply flex flex-col min-h-screen overflow-hidden;
+
+	.main {
+		@apply flex-grow;
+	}
+}
