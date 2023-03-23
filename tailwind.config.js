@@ -1,3 +1,5 @@
+const { default: plugin } = require('tailwindcss')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: ['./src/**/*.{js,jsx,ts,tsx}'],
@@ -10,19 +12,22 @@ module.exports = {
 			'text-2xl': '20px',
 			'text-3xl': '24px',
 			'text-4xl': '28px',
-			'text-5xl': '40px',
+			'text-5xl': '40px'
 		},
 		fontFamily: {
-			poppins: ['Poppins', 'sans-serif'],
+			poppins: ['Poppins', 'sans-serif']
 		},
 		colors: {
 			white: '#fff',
 			black: '#2F2F2F',
 			gray: '#C1C1C1',
 			whiteLight: '#FFF0E6',
-			secondary: '#E9E9E9',
+			secondary: '#E9E9E9'
 		},
-		extend: {},
+		extend: {}
 	},
-	plugins: [require('@tailwindcss/forms')],
+	plugins: [
+		require('@tailwindcss/forms'),
+		plugin(function ({ addUtilities }) {})
+	]
 }
