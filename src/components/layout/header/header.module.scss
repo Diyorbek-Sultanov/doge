@@ -1,0 +1,30 @@
+.header {
+	@apply w-full;
+
+	.top {
+		@apply flex items-center justify-between px-[60px] py-5 bg-black text-white text-text-sm;
+
+		.map {
+			@apply flex items-center gap-x-[100px] opacity-60;
+
+			.region {
+				@apply flex items-center gap-x-2 cursor-pointer;
+			}
+
+			.list {
+				@apply flex items-center gap-x-8;
+			}
+		}
+
+		.contact {
+			@apply flex items-center gap-x-3 opacity-60;
+
+			> span {
+				@apply flex items-center gap-x-2 cursor-pointer;
+			}
+		}
+	}
+
+	.bottom {
+	}
+}

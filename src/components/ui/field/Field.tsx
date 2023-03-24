@@ -1,13 +1,19 @@
 import { forwardRef } from 'react'
 
-import styles from './Field.module.scss'
 import { IField } from './field.interface'
+import styles from './field.module.scss'
 
 const Field = forwardRef<HTMLInputElement, IField>(
-	({ error, type = 'text', placeholder, ...rest }, ref) => {
+	({ error, type = 'text', className, placeholder, ...rest }, ref) => {
 		return (
 			<div className={styles.input}>
-				<input ref={ref} type={type} placeholder={placeholder} {...rest} />
+				<input
+					className={className}
+					ref={ref}
+					type={type}
+					placeholder={placeholder}
+					{...rest}
+				/>
 				{error && <div className={styles.error}>{error.message}</div>}
 			</div>
 		)

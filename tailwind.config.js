@@ -31,6 +31,13 @@ module.exports = {
 	},
 	plugins: [
 		require('@tailwindcss/forms')
-		//plugin(function ({ addUtilities }) {})
+		//plugin(function ({ addUtilities }) {
+		//	addUtilities({
+		//		'.flex-center': {
+		//			display: 'flex',
+		//			alignItems: 'center'
+		//		}
+		//	})
+		//})
 	]
 }
