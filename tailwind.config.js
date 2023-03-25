@@ -27,10 +27,14 @@ module.exports = {
 			whiteLight: '#FFF0E6',
 			secondary: '#E9E9E9'
 		},
-		extend: {}
+		extend: {
+			colors: {
+				orange: '#EC3B22'
+			}
+		}
 	},
 	plugins: [
-		require('@tailwindcss/forms')
+		//require('@tailwindcss/forms')
 		//plugin(function ({ addUtilities }) {
 		//	addUtilities({
 		//		'.flex-center': {

@@ -5,10 +5,30 @@
 		@apply flex items-center justify-between px-[60px] py-5 bg-black text-white text-text-sm;
 
 		.map {
-			@apply flex items-center gap-x-[100px] opacity-60;
+			@apply flex items-center gap-x-[100px];
 
 			.region {
-				@apply flex items-center gap-x-2 cursor-pointer;
+				@apply flex items-center gap-x-2 cursor-pointer relative;
+
+				.wrapper {
+					@apply absolute shadow-lg cursor-default bg-white bg-opacity-100 top-8 -right-72 w-[365px] z-40 pt-5 pl-3 pr-16 pb-16;
+
+					h2 {
+						@apply text-text-md text-black font-semibold mb-5;
+					}
+
+					.list {
+						@apply flex-wrap gap-x-6;
+
+						.li {
+							@apply flex justify-start w-14 mx-3 my-1 cursor-pointer text-black;
+						}
+
+						.liActive {
+							@apply text-orange;
+						}
+					}
+				}
 			}
 
 			.list {
@@ -26,5 +46,38 @@
 	}
 
 	.bottom {
+		@apply flex items-center px-[60px] py-10;
+
+		> img {
+			@apply pr-28;
+		}
+
+		.cat {
+			@apply flex items-center;
+
+			.drop {
+				@apply flex items-center justify-between w-[260px] mr-5 text-text-2xl bg-[#EC3B22] py-[15px] px-7 rounded-[62px] text-white overflow-hidden cursor-pointer hover:bg-[#e44f3c] transition-colors;
+
+				> span {
+					@apply pr-14;
+				}
+			}
+
+			.field {
+				@apply flex items-center mr-48 w-[660px] relative;
+
+				.search {
+					@apply border outline-none w-full bg-whiteLight rounded-[62px] opacity-40 placeholder:text-text-xl placeholder:font-normal placeholder:text-black placeholder:opacity-40 focus:border-[#0762ca] focus:border-2 py-4 px-8;
+				}
+
+				.searchIcon {
+					@apply absolute right-5 top-5;
+				}
+			}
+
+			.iconList {
+				@apply flex items-center gap-x-10;
+			}
+		}
 	}
 }

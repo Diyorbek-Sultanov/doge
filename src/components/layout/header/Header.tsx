@@ -2,7 +2,6 @@ import { FC } from 'react'
 import { AiOutlineUser } from 'react-icons/ai'
 import { BsBookmark } from 'react-icons/bs'
 import { FaBalanceScale } from 'react-icons/fa'
-import { FiMapPin } from 'react-icons/fi'
 import { FiSearch } from 'react-icons/fi'
 import { IoLanguageSharp } from 'react-icons/io5'
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
@@ -12,6 +11,7 @@ import Field from '@/components/ui/field/Field'
 
 import Doge from '@/assets/images/doge-logo.png'
 
+import Region from './region/Region'
 import styles from './header.module.scss'
 
 const Header: FC = () => {
@@ -19,10 +19,7 @@ const Header: FC = () => {
 		<header className={styles.header}>
 			<div className={styles.top}>
 				<div className={styles.map}>
-					<span className={styles.region}>
-						<FiMapPin fontSize={18} />
-						Ташкент
-					</span>
+					<Region />
 
 					<ul className={styles.list}>
 						<li>Карта сайта</li>
@@ -46,22 +43,22 @@ const Header: FC = () => {
 				<img src={Doge} alt='logo' />
 
 				<div className={styles.cat}>
-					<div>
-						Смартфоны <MdOutlineKeyboardArrowDown />
+					<div className={styles.drop}>
+						<span>Смартфоны</span> <MdOutlineKeyboardArrowDown />
 					</div>
-					<div>
+					<div className={styles.field}>
 						<Field
 							type={'search'}
 							placeholder={'Поиск товаров'}
 							className={styles.search}
 						/>
-						<FiSearch />
+						<FiSearch className={styles.searchIcon} fontSize={20} />
 					</div>
 					<div className={styles.iconList}>
-						<BsBookmark />
-						<FaBalanceScale />
-						<AiOutlineUser />
-						<RiShoppingBagLine />
+						<BsBookmark cursor='pointer' fontSize={22} />
+						<FaBalanceScale cursor='pointer' fontSize={22} />
+						<AiOutlineUser cursor='pointer' fontSize={22} />
+						<RiShoppingBagLine cursor='pointer' fontSize={22} />
 					</div>
 				</div>
 			</div>
