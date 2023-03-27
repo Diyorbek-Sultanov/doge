@@ -23,3 +23,5 @@ todo.txt
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+src/assets/images/appliances.png

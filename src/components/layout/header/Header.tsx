@@ -3,13 +3,14 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { BsBookmark } from 'react-icons/bs'
 import { FaBalanceScale } from 'react-icons/fa'
 import { FiSearch } from 'react-icons/fi'
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
 import { RiShoppingBagLine } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 
 import Field from '@/components/ui/field/Field'
 
 import Doge from '@/assets/images/doge-logo.png'
 
+import Category from './category/Category'
 import Contact from './contact/Contact'
 import styles from './header.module.scss'
 import Region from './region/Region'
@@ -33,12 +34,12 @@ const Header: FC = () => {
 			</div>
 
 			<div className={styles.bottom}>
-				<img src={Doge} alt='logo' />
+				<Link className={styles.logo} to='/'>
+					<img src={Doge} alt='logo' />
+				</Link>
 
 				<div className={styles.cat}>
-					<div className={styles.drop}>
-						<span>Смартфоны</span> <MdOutlineKeyboardArrowDown />
-					</div>
+					<Category />
 					<div className={styles.field}>
 						<Field
 							type={'search'}
