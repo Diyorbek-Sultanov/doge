@@ -16,22 +16,24 @@ const Region: FC = () => {
 		<div className={styles.region}>
 			<FiMapPin fontSize={18} />
 			<span onClick={() => setIsShow(!isShow)}>Ташкент</span>
-			<div className={styles.wrapper} ref={ref}>
-				<h2>Выберите ваше геолокация</h2>
-				<ul className={styles.list}>
-					{regionData.map((item, i) => (
-						<li
-							className={clsx(styles.li, {
-								[styles.liActive]: active === i
-							})}
-							key={item.region}
-							onClick={() => setActive(i)}
-						>
-							{item.region}
-						</li>
-					))}
-				</ul>
-			</div>
+			{isShow && (
+				<div className={styles.wrapper} ref={ref}>
+					<h2>Выберите ваше геолокация</h2>
+					<ul className={styles.list}>
+						{regionData.map((item, i) => (
+							<li
+								className={clsx(styles.li, {
+									[styles.liActive]: active === i
+								})}
+								key={item.region}
+								onClick={() => setActive(i)}
+							>
+								{item.region}
+							</li>
+						))}
+					</ul>
+				</div>
+			)}
 		</div>
 	)
 }

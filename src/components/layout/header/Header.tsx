@@ -3,7 +3,6 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { BsBookmark } from 'react-icons/bs'
 import { FaBalanceScale } from 'react-icons/fa'
 import { FiSearch } from 'react-icons/fi'
-import { IoLanguageSharp } from 'react-icons/io5'
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
 import { RiShoppingBagLine } from 'react-icons/ri'
 
@@ -11,8 +10,9 @@ import Field from '@/components/ui/field/Field'
 
 import Doge from '@/assets/images/doge-logo.png'
 
-import Region from './region/Region'
+import Contact from './contact/Contact'
 import styles from './header.module.scss'
+import Region from './region/Region'
 
 const Header: FC = () => {
 	return (
@@ -29,14 +29,7 @@ const Header: FC = () => {
 					</ul>
 				</div>
 
-				<div className={styles.contact}>
-					<span>
-						<IoLanguageSharp fontSize={18} />
-						Русский
-					</span>
-					<p>+998 71 123-45-67</p>
-					<p>1201</p>
-				</div>
+				<Contact />
 			</div>
 
 			<div className={styles.bottom}>
