@@ -1,0 +1,23 @@
+.slider {
+	@apply w-[1000pxpx] h-[460px] mx-auto relative bg-sliderSec rounded-lg p-16 mb-10;
+
+	.item {
+		@apply flex justify-between;
+
+		.content {
+			@apply text-black w-full;
+
+			> h2 {
+				@apply text-[64px] font-extrabold;
+			}
+
+			> h3 {
+				@apply text-[32px] font-bold;
+			}
+
+			> p {
+				@apply text-gray text-text-md;
+			}
+		}
+	}
+}

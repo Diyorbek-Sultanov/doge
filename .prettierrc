@@ -18,7 +18,8 @@
 		"^@/store/(.*)$",
 		"^../(.*)",
 		"^./(.*)",
-		"(.scss)"
+		"(.scss)",
+		"(/css)"
 	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true

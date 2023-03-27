@@ -6,6 +6,7 @@
 			"@/ui/*": ["components/ui/*"],
 			"@/screens/*": ["components/screens/*"],
 			"@/shared/*": ["components/shared/*"],
+			"@/layout": ["components/layout/*"],
 			"@/hooks/*": ["hooks/*"],
 			"@/services/*": ["services/*"],
 			"@/assets/*": ["./assets/*"],

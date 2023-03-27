@@ -25,7 +25,8 @@ module.exports = {
 			black: '#2F2F2F',
 			gray: '#C1C1C1',
 			whiteLight: '#FFF0E6',
-			secondary: '#E9E9E9'
+			secondary: '#E9E9E9',
+			sliderSec: '#EEEEEE'
 		},
 		extend: {
 			colors: {
