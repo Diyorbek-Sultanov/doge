@@ -1,1 +1,31 @@
+.footer {
+	@apply bg-black;
 
+	.wrapper {
+		@apply max-w-[1280px] mx-auto px-4;
+	}
+
+	.top {
+		@apply flex items-center justify-between border-b border-b-gray py-12;
+
+		> ul {
+			@apply flex items-center gap-x-14;
+
+			> li {
+				@apply text-text-md text-whiteLight font-medium opacity-60 hover:opacity-100 cursor-pointer;
+			}
+		}
+
+		> span {
+			@apply text-text-md block text-whiteLight font-medium opacity-60 hover:opacity-100 cursor-pointer;
+		}
+	}
+
+	.bottom {
+		@apply flex items-center justify-between py-7;
+
+		> span {
+			@apply text-gray opacity-30 hover:opacity-70 select-none;
+		}
+	}
+}
