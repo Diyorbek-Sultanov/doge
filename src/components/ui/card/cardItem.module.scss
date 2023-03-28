@@ -5,6 +5,10 @@
 		@apply absolute top-[209px] right-[30px] z-20 cursor-pointer;
 	}
 
+	.favorit {
+		@apply absolute top-[15px] right-3 z-20 bg-favorit backdrop-opacity-[7px] py-[3px] px-[5px] rounded-full cursor-pointer;
+	}
+
 	.content {
 		@apply pt-5 pl-5 pr-11;
 

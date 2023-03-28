@@ -1,1 +1,17 @@
+.home {
+	.brands {
+		@apply bg-white px-16 py-10 mb-28;
 
+		.wrapper {
+			@apply flex items-center gap-x-5;
+
+			> div {
+				@apply w-full;
+
+				> img {
+					@apply max-w-none;
+				}
+			}
+		}
+	}
+}

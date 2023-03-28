@@ -34,6 +34,9 @@ module.exports = {
 			},
 			boxShadow: {
 				catShadow: '0px 24px 84px rgba(0, 0, 0, 0.12)'
+			},
+			backgroundColor: {
+				favorit: 'rgba(0, 0, 0, 0.09)'
 			}
 		}
 	},

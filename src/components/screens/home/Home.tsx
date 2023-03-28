@@ -1,7 +1,6 @@
 import { FC } from 'react'
 
-import Heading from '@/components/ui/heading/Heading'
-
+import Brands from './Brands'
 import CardSlider from './cardSlider/CardSlider'
 import styles from './home.module.scss'
 import MainCategory from './mainCategory/MainCategory'
@@ -12,8 +11,8 @@ const Home: FC = () => {
 		<div className={styles.home}>
 			<Slider />
 			<MainCategory />
-			<Heading>Супер цена</Heading>
 			<CardSlider />
+			<Brands />
 		</div>
 	)
 }
