@@ -1,5 +1,5 @@
 .header {
-	@apply w-full;
+	@apply w-full shadow-md mb-10 bg-white;
 
 	.top {
 		@apply flex items-center justify-between px-[60px] py-5 bg-black text-white text-text-sm;
@@ -45,7 +45,7 @@
 			@apply flex items-center gap-x-3 relative;
 
 			> span {
-				@apply flex items-center gap-x-2 cursor-pointer opacity-60 hover:opacity-100;
+				@apply flex items-center gap-x-2 cursor-pointer select-none opacity-60 hover:opacity-100;
 			}
 
 			.wrapper {
@@ -85,6 +85,11 @@
 
 				> span {
 					@apply pr-14 select-none;
+				}
+
+				.icon {
+					transform: rotate(180deg);
+					transition: transform 0.3s ease;
 				}
 
 				.dropWrapper {

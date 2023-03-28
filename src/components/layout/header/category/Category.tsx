@@ -13,7 +13,11 @@ const Category: FC = () => {
 	return (
 		<div className={styles.drop}>
 			<span onClick={() => setOpen(!open)}>Категоры</span>
-			<MdOutlineKeyboardArrowDown />
+			<MdOutlineKeyboardArrowDown
+				className={clsx({
+					[styles.icon]: open
+				})}
+			/>
 
 			<div
 				className={clsx(styles.dropWrapper, {

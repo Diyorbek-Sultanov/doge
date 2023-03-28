@@ -16,6 +16,7 @@ const Slider: FC = () => {
 				modules={[Virtual, Pagination, Autoplay]}
 				spaceBetween={10}
 				slidesPerView={1}
+				draggable={true}
 				pagination={{ clickable: true }}
 				autoplay={{
 					delay: 2000,

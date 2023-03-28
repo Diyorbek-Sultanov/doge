@@ -1,0 +1,11 @@
+.slider {
+	@apply mb-20;
+
+	.btns {
+		@apply flex items-center gap-x-3 relative -top-[70px] -right-[45%] z-30;
+
+		> button {
+			@apply w-[50px] h-[50px] rounded-full bg-white cursor-pointer flex items-center justify-center;
+		}
+	}
+}

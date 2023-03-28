@@ -1,0 +1,19 @@
+.item {
+	@apply h-[355px] relative overflow-hidden bg-white;
+
+	.icon {
+		@apply absolute top-[209px] right-[30px] z-20 cursor-pointer;
+	}
+
+	.content {
+		@apply pt-5 pl-5 pr-11;
+
+		> h3 {
+			@apply text-text-md text-[#000000] mb-3;
+		}
+
+		> h4 {
+			@apply text-text-md text-orange font-semibold;
+		}
+	}
+}

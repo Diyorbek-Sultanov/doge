@@ -1,9 +1,9 @@
 import { FC, PropsWithChildren } from 'react'
 
+import styles from './heading.module.scss'
+
 const Heading: FC<PropsWithChildren<unknown>> = ({ children }) => {
-	return (
-		<h1 className='text-text-2xl text-[#000000] font-bold mb-10'>{children}</h1>
-	)
+	return <h1 className={styles.heading}>{children}</h1>
 }
 
 export default Heading

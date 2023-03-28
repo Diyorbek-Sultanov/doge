@@ -7,3 +7,13 @@
 * {
 	font-family: 'Poppins', sans-serif;
 }
+
+body {
+	@apply bg-sliderSec;
+}
+
+.slider {
+	.swiper-horizontal {
+		height: 450px;
+	}
+}

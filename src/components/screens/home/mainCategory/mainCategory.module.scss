@@ -1,0 +1,21 @@
+.mainCategory {
+	@apply mb-16;
+
+	.wrapper {
+		@apply grid grid-cols-4 gap-6;
+	}
+
+	.item {
+		@apply bg-white shadow-md rounded-md flex items-center gap-x-3 py-9 px-7;
+
+		> div {
+			> h3 {
+				@apply text-black text-text-md font-semibold;
+			}
+
+			> p {
+				@apply text-text-sm text-black opacity-50;
+			}
+		}
+	}
+}
