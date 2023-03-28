@@ -1,35 +1,28 @@
-import AppLi from '@/assets/images/appliances-2.png'
-import Auto from '@/assets/images/auto.png'
-import Headphone from '@/assets/images/headphone.png'
-import Kux from '@/assets/images/kux.png'
-import Phone from '@/assets/images/phone.png'
-import Tv from '@/assets/images/tv.png'
+import { ECategory, ICategoryOption } from './catagory.interface'
 
-import { ECategory, ICategory } from './catagory.interface'
-
-export const catagoryData: ICategory[] = [
+export const categoryOption: ICategoryOption[] = [
 	{
-		catagory: ECategory.BIT,
-		img: AppLi
+		label: ECategory.BIT,
+		value: ECategory.BIT
 	},
 	{
-		catagory: ECategory.TEL,
-		img: Phone
+		label: ECategory.TEL,
+		value: ECategory.TEL
 	},
 	{
-		catagory: ECategory.KUX,
-		img: Kux
+		label: ECategory.KUX,
+		value: ECategory.KUX
 	},
 	{
-		catagory: ECategory.AUTO,
-		img: Auto
+		label: ECategory.AUTO,
+		value: ECategory.AUTO
 	},
 	{
-		catagory: ECategory.TV,
-		img: Tv
+		label: ECategory.TV,
+		value: ECategory.TV
 	},
 	{
-		catagory: ECategory.TELACC,
-		img: Headphone
+		label: ECategory.TELACC,
+		value: ECategory.TELACC
 	}
 ]

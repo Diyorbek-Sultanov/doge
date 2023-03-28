@@ -7,7 +7,7 @@ export enum ECategory {
 	TELACC = 'Телефон акссесуары'
 }
 
-export interface ICategory {
-	catagory: ECategory
-	img?: string
+export interface ICategoryOption {
+	label: ECategory
+	value: ECategory
 }

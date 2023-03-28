@@ -80,44 +80,6 @@
 		.cat {
 			@apply flex items-center relative;
 
-			.drop {
-				@apply flex items-center justify-between w-[260px] mr-5 text-text-2xl bg-[#EC3B22] py-[15px] px-7 rounded-[62px] text-white overflow-hidden cursor-pointer hover:bg-[#e44f3c] transition-colors;
-
-				> span {
-					@apply pr-14 select-none;
-				}
-
-				.icon {
-					transform: rotate(180deg);
-					transition: transform 0.3s ease;
-				}
-
-				.dropWrapper {
-					@apply w-[400px] absolute top-[65px] left-2 bg-white rounded-lg text-black shadow-catShadow pt-12 px-[50px] pb-[60px] cursor-default transition-all duration-300 ease-in;
-					transform: translateY(-100px);
-					z-index: -1;
-					opacity: 0;
-
-					> ul {
-						@apply w-full flex flex-col gap-y-4;
-
-						.dropLi {
-							@apply flex justify-between items-center cursor-pointer select-none pl-4 text-text-md font-semibold;
-						}
-
-						.dropLiActive {
-							@apply text-orange border-l-4 border-l-orange;
-						}
-					}
-				}
-
-				.dropWrapperActive {
-					transform: translateY(0);
-					z-index: 30;
-					opacity: 1;
-				}
-			}
-
 			.field {
 				@apply flex items-center mr-48 w-[660px] relative;
 

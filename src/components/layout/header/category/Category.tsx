@@ -1,45 +1,16 @@
-import clsx from 'clsx'
-import { FC, useState } from 'react'
-import { MdOutlineKeyboardArrowDown } from 'react-icons/md'
+import { FC } from 'react'
+import Select from 'react-select'
 
-import styles from '../header.module.scss'
-
-import { catagoryData } from './category.data'
+import { categoryOption } from './category.data'
 
 const Category: FC = () => {
-	const [active, setActive] = useState(0)
-	const [open, setOpen] = useState(false)
-
 	return (
-		<div className={styles.drop}>
-			<span onClick={() => setOpen(!open)}>Категоры</span>
-			<MdOutlineKeyboardArrowDown
-				className={clsx({
-					[styles.icon]: open
-				})}
-			/>
-
-			<div
-				className={clsx(styles.dropWrapper, {
-					[styles.dropWrapperActive]: open
-				})}
-			>
-				<ul>
-					{catagoryData.map((item, i) => (
-						<li
-							className={clsx(styles.dropLi, {
-								[styles.dropLiActive]: active === i
-							})}
-							key={item.catagory}
-							onClick={() => setActive(i)}
-						>
-							{item.catagory}
-							<img src={item.img} alt='' />
-						</li>
-					))}
-				</ul>
-			</div>
-		</div>
+		<Select
+			options={categoryOption}
+			classNamePrefix='category-select'
+			placeholder='Категориесь'
+			isSearchable={false}
+		/>
 	)
 }
 
