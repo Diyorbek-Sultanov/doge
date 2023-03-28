@@ -3,26 +3,26 @@ import { ECategory, ICategoryOption } from './catagory.interface'
 export const categoryOption: ICategoryOption[] = [
 	{
 		label: ECategory.BIT,
-		value: ECategory.BIT
+		value: 'appliances'
 	},
 	{
 		label: ECategory.TEL,
-		value: ECategory.TEL
+		value: 'phones'
 	},
 	{
 		label: ECategory.KUX,
-		value: ECategory.KUX
+		value: 'kitchen'
 	},
 	{
 		label: ECategory.AUTO,
-		value: ECategory.AUTO
+		value: 'auto-accesories'
 	},
 	{
 		label: ECategory.TV,
-		value: ECategory.TV
+		value: 'tv'
 	},
 	{
 		label: ECategory.TELACC,
-		value: ECategory.TELACC
+		value: 'phone-accesories'
 	}
 ]

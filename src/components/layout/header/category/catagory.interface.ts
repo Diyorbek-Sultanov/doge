@@ -9,5 +9,5 @@ export enum ECategory {
 
 export interface ICategoryOption {
 	label: ECategory
-	value: ECategory
+	value: string
 }
