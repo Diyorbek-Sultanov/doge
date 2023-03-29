@@ -1,0 +1,11 @@
+.catalog {
+	@apply mb-32;
+
+	.wrapper {
+		@apply grid grid-cols-4 gap-6 mb-14;
+	}
+
+	.select {
+		@apply w-[219px];
+	}
+}

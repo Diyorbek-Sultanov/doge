@@ -30,7 +30,9 @@ const Region: FC = () => {
 									[styles.liActive]: active === item.region
 								})}
 								key={item.region}
-								onClick={() => addToLocalStorage(item.region, setActive)}
+								onClick={() =>
+									addToLocalStorage(item.region, setActive, 'region')
+								}
 							>
 								{item.region}
 							</li>

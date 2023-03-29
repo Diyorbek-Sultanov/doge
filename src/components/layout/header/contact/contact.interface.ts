@@ -1,9 +1,9 @@
-export enum Lang {
+export enum ELang {
 	RUS = 'Русский',
 	UZ = 'Ozbek',
-	TURK = 'TURK'
+	ENG = 'English'
 }
 
 export interface IContact {
-	lang: Lang
+	lang: ELang
 }

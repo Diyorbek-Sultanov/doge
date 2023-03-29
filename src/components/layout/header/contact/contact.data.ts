@@ -1,13 +1,13 @@
-import { IContact, Lang } from './contact.interface'
+import { ELang, IContact } from './contact.interface'
 
 export const langData: IContact[] = [
 	{
-		lang: Lang.RUS
+		lang: ELang.RUS
 	},
 	{
-		lang: Lang.UZ
+		lang: ELang.UZ
 	},
 	{
-		lang: Lang.TURK
+		lang: ELang.ENG
 	}
 ]

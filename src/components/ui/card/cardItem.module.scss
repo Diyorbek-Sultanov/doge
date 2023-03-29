@@ -1,5 +1,5 @@
 .item {
-	@apply h-[355px] relative overflow-hidden bg-white;
+	@apply h-[355px] relative overflow-hidden bg-white transition-all ease-in-out duration-300;
 
 	.icon {
 		@apply absolute top-[209px] right-[30px] z-20 cursor-pointer;
@@ -19,5 +19,10 @@
 		> h4 {
 			@apply text-text-md text-orange font-semibold;
 		}
+	}
+
+	&:hover {
+		@apply shadow-catShadow;
+		transform: translateY(-10px);
 	}
 }

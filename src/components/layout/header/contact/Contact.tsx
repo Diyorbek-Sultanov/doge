@@ -4,30 +4,32 @@ import { IoLanguageSharp } from 'react-icons/io5'
 
 import { useOutside } from '@/hooks/useOutside'
 
+import { addToLocalStorage } from '../../../../utils/addToLs'
+import { getToLocalStorage } from '../../../../utils/getToLs'
 import styles from '../header.module.scss'
 
 import { langData } from './contact.data'
 
 const Contact: FC = () => {
-	const [active, setActive] = useState(0)
+	const [active, setActive] = useState('')
 	const { isShow, ref, setIsShow } = useOutside(false)
 
 	return (
 		<div className={styles.contact}>
 			<span onClick={() => setIsShow(!isShow)}>
 				<IoLanguageSharp fontSize={18} />
-				Русский
+				{getToLocalStorage('lang')}
 			</span>
 			{isShow && (
 				<div className={styles.wrapper} ref={ref}>
 					<ul>
-						{langData.map((item, i) => (
+						{langData.map(item => (
 							<li
 								className={clsx(styles.contactLi, {
-									[styles.contactLiActive]: active === i
+									[styles.contactLiActive]: active === item.lang
 								})}
 								key={item.lang}
-								onClick={() => setActive(i)}
+								onClick={() => addToLocalStorage(item.lang, setActive, 'lang')}
 							>
 								{item.lang}
 							</li>

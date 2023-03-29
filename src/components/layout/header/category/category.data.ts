@@ -15,7 +15,7 @@ export const categoryOption: ICategoryOption[] = [
 	},
 	{
 		label: ECategory.AUTO,
-		value: 'auto-accesories'
+		value: 'auto'
 	},
 	{
 		label: ECategory.TV,

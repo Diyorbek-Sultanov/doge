@@ -1,0 +1,19 @@
+.location {
+	@apply mb-6;
+
+	.path {
+		@apply flex items-center gap-x-3 text-[#999];
+
+		.link {
+			@apply flex items-center gap-x-3;
+		}
+
+		span {
+			@apply block text-text-md font-normal cursor-pointer;
+		}
+
+		.pathActive {
+			@apply text-black;
+		}
+	}
+}
