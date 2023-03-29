@@ -1,5 +1,3 @@
-const { default: plugin } = require('tailwindcss')
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
@@ -30,25 +28,20 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				orange: '#EC3B22'
+				orange: '#EC3B22',
+				imgBg: 'rgba(#EC3B22, .3)'
 			},
 			boxShadow: {
 				catShadow: '0px 24px 84px rgba(0, 0, 0, 0.12)'
 			},
 			backgroundColor: {
 				favorit: 'rgba(0, 0, 0, 0.09)'
+			},
+			gridTemplateColumns: {
+				productDetailGrid: '9fr 3fr',
+				productInfoGrid: '1fr 4fr 4fr'
 			}
 		}
 	},
-	plugins: [
-		//require('@tailwindcss/forms')
-		//plugin(function ({ addUtilities }) {
-		//	addUtilities({
-		//		'.flex-center': {
-		//			display: 'flex',
-		//			alignItems: 'center'
-		//		}
-		//	})
-		//})
-	]
+	plugins: []
 }

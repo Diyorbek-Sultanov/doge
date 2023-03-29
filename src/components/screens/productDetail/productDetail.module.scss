@@ -1,0 +1,62 @@
+.product {
+	@apply mb-20;
+
+	.wrapper {
+		@apply grid grid-cols-productDetailGrid gap-x-6 mb-14;
+	}
+
+	.info {
+		@apply grid grid-cols-productInfoGrid bg-white rounded-md py-7 px-6;
+
+		.images {
+			> img {
+				@apply py-[13px] px-[20px] object-cover  cursor-pointer hover:bg-imgBg;
+			}
+		}
+
+		.bigImage {
+			@apply w-[432px] h-[432px];
+
+			> img {
+				@apply w-full h-full object-cover;
+			}
+		}
+
+		.content {
+			@apply justify-self-center;
+			.price {
+				@apply mb-[39px];
+
+				> span {
+					@apply mb-3 text-text-sm font-normal;
+				}
+
+				> h3 {
+					@apply font-bold text-[#000] text-text-2xl;
+				}
+			}
+
+			> p {
+				@apply mb-4 text-text-sm font-normal;
+			}
+
+			.company {
+				@apply flex items-center gap-5;
+
+				> div {
+					> span {
+						@apply text-text-xs font-normal mb-2 text-[#c1c1c1];
+					}
+
+					> h3 {
+						@apply text-text-md font-semibold;
+					}
+				}
+			}
+		}
+	}
+
+	.order {
+		@apply bg-white px-8 py-10 rounded-md;
+	}
+}
