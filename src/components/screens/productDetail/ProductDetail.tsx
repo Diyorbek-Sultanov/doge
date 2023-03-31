@@ -2,6 +2,7 @@ import { FC } from 'react'
 
 import ProductInfo from './ProductInfo'
 import ProductOrder from './ProductOrder'
+import ProductTab from './ProductTab'
 import styles from './productDetail.module.scss'
 
 const ProductDetail: FC = () => {
@@ -11,6 +12,7 @@ const ProductDetail: FC = () => {
 				<ProductInfo />
 				<ProductOrder />
 			</div>
+			<ProductTab />
 		</div>
 	)
 }

@@ -108,4 +108,54 @@
 			}
 		}
 	}
+
+	.tabs {
+		@apply mb-20 bg-white rounded-md;
+
+		.click {
+			@apply flex items-center gap-x-8 py-5 px-6;
+
+			.item {
+				@apply text-text-md font-normal cursor-pointer;
+			}
+
+			.itemActive {
+				@apply font-semibold border-b-4 border-b-orange;
+			}
+		}
+
+		.tab {
+			@apply p-12 hidden;
+
+			.wrapper {
+				@apply grid grid-cols-productTabGrid gap-x-16;
+			}
+
+			.basis {
+				> p {
+					@apply text-text-sm font-normal mb-5;
+				}
+
+				.basisWrapper {
+					@apply w-[350px] flex items-center flex-wrap gap-4;
+
+					> div {
+						@apply w-[160px];
+
+						span {
+							@apply text-text-xs block text-gray;
+						}
+
+						h3 {
+							@apply text-text-md font-semibold;
+						}
+					}
+				}
+			}
+		}
+
+		.tabActive {
+			@apply block;
+		}
+	}
 }
