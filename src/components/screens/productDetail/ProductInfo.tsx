@@ -1,20 +1,32 @@
-import { FC } from 'react'
+import clsx from 'clsx'
+import { FC, useState } from 'react'
 
 import { productData } from './product.data'
 import styles from './productDetail.module.scss'
 
 const ProductInfo: FC = () => {
-	const { brand, camera, dioganal, images, img, name, price } = productData
+	const [index, setIndex] = useState(0)
+
+	const { brand, camera, dioganal, images, price } = productData
 
 	return (
 		<div className={styles.info}>
 			<div className={styles.images}>
 				{images.map((item, i) => (
-					<img key={i} src={item.smallImg} draggable={false} alt='small-img' />
+					<img
+						className={clsx(styles.img, {
+							[styles.selectImage]: i === index
+						})}
+						key={i}
+						src={item.smallImg}
+						draggable={false}
+						alt='small-img'
+						onMouseEnter={() => setIndex(i)}
+					/>
 				))}
 			</div>
 			<div className={styles.bigImage}>
-				<img src={img} draggable={false} alt='iphone' />
+				<img src={images[index].smallImg} draggable={false} alt='iphone' />
 			</div>
 			<div className={styles.content}>
 				<div className={styles.price}>

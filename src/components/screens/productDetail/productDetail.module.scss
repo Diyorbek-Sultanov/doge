@@ -9,16 +9,22 @@
 		@apply grid grid-cols-productInfoGrid bg-white rounded-md py-7 px-6;
 
 		.images {
-			> img {
-				@apply py-[13px] px-[20px] object-cover  cursor-pointer hover:bg-imgBg;
+			@apply mr-3;
+
+			.img {
+				@apply py-[13px] px-[20px] object-cover rounded-xl cursor-pointer;
+			}
+
+			.selectImage {
+				@apply bg-black;
 			}
 		}
 
 		.bigImage {
-			@apply w-[432px] h-[432px];
+			@apply w-[432px] h-[330px];
 
 			> img {
-				@apply w-full h-full object-cover;
+				@apply w-full h-full block object-cover;
 			}
 		}
 
@@ -57,6 +63,49 @@
 	}
 
 	.order {
-		@apply bg-white px-8 py-10 rounded-md;
+		@apply flex flex-col;
+		.wrapper {
+			@apply bg-white grid-cols-none px-8 py-10 rounded-md;
+		}
+
+		.btns {
+			@apply flex flex-col mb-7;
+
+			.btnCart {
+				@apply flex items-center gap-x-3 bg-orange rounded-[60px] py-4 px-16 transition-colors mb-4;
+
+				&:hover {
+					background-color: lighten(#ec3b22, 5%);
+				}
+			}
+
+			.btnBuy {
+				@apply flex items-center justify-center gap-x-1 text-orange py-4 px-10 rounded-[60px] hover:bg-sliderSec transition-colors;
+			}
+		}
+
+		.favorit {
+			@apply py-3 px-5 flex flex-col items-center cursor-pointer;
+
+			> span {
+				@apply mt-4;
+			}
+		}
+
+		.delivery {
+			@apply bg-white rounded-md;
+
+			.item {
+				@apply py-5 bg-orange text-white flex items-center justify-center gap-x-1;
+
+				> p {
+					@apply text-text-md font-semibold;
+				}
+			}
+
+			> img {
+				@apply py-4 px-5;
+			}
+		}
 	}
 }

@@ -9,5 +9,5 @@ export interface IProductDetail {
 }
 
 interface IImages {
-	smallImg: string
+	smallImg: string | undefined
 }

@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 import { FC, PropsWithChildren } from 'react'
 
-import styles from './Button.module.scss'
 import { IButton } from './button.interface'
+import styles from './button.module.scss'
 
 const Button: FC<PropsWithChildren<IButton>> = ({
 	children,
