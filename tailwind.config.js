@@ -40,7 +40,8 @@ module.exports = {
 			gridTemplateColumns: {
 				productDetailGrid: '9fr 3fr',
 				productInfoGrid: '1fr 4fr 4fr',
-				productTabGrid: '4fr 4fr'
+				productTabGrid: '4fr 4fr',
+				cartGrid: '8fr 4fr'
 			}
 		}
 	},

@@ -11,7 +11,7 @@ import { useTypedSelector } from '@/hooks/useTypedSelector'
 import styles from './cardItem.module.scss'
 
 const CardSliderItem: FC<{ item: ICardSlider }> = ({ item }) => {
-	const { addFavorit, removeFavorit } = useActions()
+	const { addFavorit, removeFavorit, addToCart } = useActions()
 	const { favorites } = useTypedSelector(state => state.favorit)
 
 	const findFavorit =
@@ -20,7 +20,7 @@ const CardSliderItem: FC<{ item: ICardSlider }> = ({ item }) => {
 	return (
 		<div className={styles.item}>
 			<img src={item.img} alt={item.name} />
-			{[]}
+
 			{findFavorit ? (
 				<div
 					className={styles.remove}
@@ -33,10 +33,14 @@ const CardSliderItem: FC<{ item: ICardSlider }> = ({ item }) => {
 					<FiBookmark color='#fff' fontSize={20} />
 				</div>
 			)}
-			<RiShoppingBagLine className={styles.icon} fontSize={20} />
+			<RiShoppingBagLine
+				className={styles.icon}
+				fontSize={20}
+				onClick={() => addToCart(item)}
+			/>
 			<div className={styles.content}>
 				<h3>{item.name}</h3>
-				<h4>{item.price}</h4>
+				<h4>{item.price} uzs</h4>
 			</div>
 		</div>
 	)

@@ -54,7 +54,12 @@ const Header: FC = () => {
 							<BsBookmark cursor='pointer' fontSize={22} />
 						</NavLink>
 						<AiOutlineUser cursor='pointer' fontSize={22} />
-						<RiShoppingBagLine cursor='pointer' fontSize={22} />
+						<NavLink
+							className={({ isActive }) => (isActive ? 'active-link' : '')}
+							to='/cart'
+						>
+							<RiShoppingBagLine cursor='pointer' fontSize={22} />
+						</NavLink>
 					</div>
 				</div>
 			</div>

@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import Layout from '@/components/layout/Layout'
+import Cart from '@/components/screens/cart/Cart'
 import Catalog from '@/components/screens/catalog/Catalog'
 import Delivery from '@/components/screens/delivery/Delivery'
 import Favorit from '@/components/screens/favorit/Favorit'
@@ -21,6 +22,7 @@ const App: FC = () => {
 				<Route path='/delivery' element={<Delivery />} />
 				<Route path='/help' element={<Help />} />
 				<Route path='/favorit' element={<Favorit />} />
+				<Route path='/cart' element={<Cart />} />
 			</Route>
 		</Routes>
 	)
