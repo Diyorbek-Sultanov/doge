@@ -24,9 +24,9 @@ const Header: FC = () => {
 
 					<ul className={styles.list}>
 						<li>Карта сайта</li>
-						<li>Платёжная система</li>
-						<li>Служба доставки</li>
-						<li>Помощь</li>
+						<Link to='/payment'>Платёжная система</Link>
+						<Link to='/delivery'>Служба доставки</Link>
+						<Link to='/help'>Помощь</Link>
 					</ul>
 				</div>
 
