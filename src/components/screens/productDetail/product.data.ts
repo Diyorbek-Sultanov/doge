@@ -1,9 +1,8 @@
+import IphoneSmall2 from '@/assets/images/iphone-2.png'
+import IphoneSmall3 from '@/assets/images/iphone-3.png'
+import IphoneSmall4 from '@/assets/images/iphone-4.png'
+import IphoneSmall5 from '@/assets/images/iphone-5.png'
 import Iphone from '@/assets/images/iphone.png'
-import IphoneSmall2 from '@/assets/images/small-iphone-2.png'
-import IphoneSmall3 from '@/assets/images/small-iphone-3.png'
-import IphoneSmall4 from '@/assets/images/small-iphone-4.png'
-import IphoneSmall5 from '@/assets/images/small-iphone-5.png'
-import IphoneSmall from '@/assets/images/small-iphone.png'
 
 import { IProductDetail } from './product.interface'
 
@@ -14,7 +13,7 @@ export const productData: IProductDetail = {
 	img: Iphone,
 	images: [
 		{
-			smallImg: IphoneSmall
+			smallImg: Iphone
 		},
 		{
 			smallImg: IphoneSmall2

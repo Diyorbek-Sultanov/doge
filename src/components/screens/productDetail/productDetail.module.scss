@@ -12,7 +12,7 @@
 			@apply mr-3;
 
 			.img {
-				@apply py-[13px] px-[20px] object-cover rounded-xl cursor-pointer;
+				@apply py-[13px] px-[10px] object-cover rounded-xl cursor-pointer;
 			}
 
 			.selectImage {
@@ -21,7 +21,7 @@
 		}
 
 		.bigImage {
-			@apply w-[432px] h-[330px];
+			@apply w-[432px] h-[432px];
 
 			> img {
 				@apply w-full h-full block object-cover;
@@ -156,6 +156,17 @@
 
 		.tabActive {
 			@apply block;
+			animation: fadeIn ease-in 0.3s;
 		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
 	}
 }
