@@ -1,0 +1,15 @@
+.favorit {
+	@apply mb-24;
+
+	.head {
+		@apply flex items-baseline gap-x-7;
+
+		> span {
+			@apply font-normal text-text-sm opacity-50;
+		}
+	}
+
+	.wrapper {
+		@apply grid grid-cols-4 gap-6;
+	}
+}

@@ -18,7 +18,7 @@ const Contact: FC = () => {
 		<div className={styles.contact}>
 			<span onClick={() => setIsShow(!isShow)}>
 				<IoLanguageSharp fontSize={18} />
-				{getToLocalStorage('lang')}
+				{getToLocalStorage('lang') ? getToLocalStorage('lang') : 'English'}
 			</span>
 			{isShow && (
 				<div className={styles.wrapper} ref={ref}>

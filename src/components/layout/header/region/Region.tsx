@@ -18,7 +18,7 @@ const Region: FC = () => {
 		<div className={styles.region}>
 			<FiMapPin onClick={() => setIsShow(!isShow)} fontSize={18} />
 			<span onClick={() => setIsShow(!isShow)}>
-				{getToLocalStorage('region')}
+				{getToLocalStorage('region') ? getToLocalStorage('region') : 'Ташкент'}
 			</span>
 			{isShow && (
 				<div className={styles.wrapper} ref={ref}>
