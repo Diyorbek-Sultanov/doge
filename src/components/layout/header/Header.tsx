@@ -1,10 +1,9 @@
 import { FC } from 'react'
 import { AiOutlineUser } from 'react-icons/ai'
 import { BsBookmark } from 'react-icons/bs'
-import { FaBalanceScale } from 'react-icons/fa'
 import { FiSearch } from 'react-icons/fi'
 import { RiShoppingBagLine } from 'react-icons/ri'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 
 import Field from '@/components/ui/field/Field'
 
@@ -29,7 +28,6 @@ const Header: FC = () => {
 						<Link to='/help'>Помощь</Link>
 					</ul>
 				</div>
-
 				<Contact />
 			</div>
 
@@ -49,8 +47,12 @@ const Header: FC = () => {
 						<FiSearch className={styles.searchIcon} fontSize={20} />
 					</div>
 					<div className={styles.iconList}>
-						<BsBookmark cursor='pointer' fontSize={22} />
-						<FaBalanceScale cursor='pointer' fontSize={22} />
+						<NavLink
+							className={({ isActive }) => (isActive ? 'active-link' : '')}
+							to='/favorit'
+						>
+							<BsBookmark cursor='pointer' fontSize={22} />
+						</NavLink>
 						<AiOutlineUser cursor='pointer' fontSize={22} />
 						<RiShoppingBagLine cursor='pointer' fontSize={22} />
 					</div>

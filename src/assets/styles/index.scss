@@ -20,3 +20,21 @@ body {
 		height: 450px;
 	}
 }
+
+.active-link {
+	@apply bg-orange p-[18px] rounded-full;
+
+	> svg {
+		fill: white;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	border-radius: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #918888;
+	border-radius: 16px;
+}

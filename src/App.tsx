@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import Layout from '@/components/layout/Layout'
 import Catalog from '@/components/screens/catalog/Catalog'
 import Delivery from '@/components/screens/delivery/Delivery'
+import Favorit from '@/components/screens/favorit/Favorit'
 import Help from '@/components/screens/help/Help'
 import Home from '@/components/screens/home/Home'
 import Payment from '@/components/screens/payment/Payment'
@@ -19,6 +20,7 @@ const App: FC = () => {
 				<Route path='/payment' element={<Payment />} />
 				<Route path='/delivery' element={<Delivery />} />
 				<Route path='/help' element={<Help />} />
+				<Route path='/favorit' element={<Favorit />} />
 			</Route>
 		</Routes>
 	)

@@ -9,6 +9,7 @@
 			"@/layout": ["components/layout/*"],
 			"@/hooks/*": ["hooks/*"],
 			"@/services/*": ["services/*"],
+			"@/store/*": ["store/*"],
 			"@/assets/*": ["./assets/*"],
 			"@/sharedG": ["shared/*"]
 		}
