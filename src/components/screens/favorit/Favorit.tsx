@@ -1,6 +1,7 @@
 import { FC } from 'react'
 
 import CardItem from '@/ui/card/CardItem'
+import Empty from '@/ui/empty/Empty'
 import Heading from '@/ui/heading/Heading'
 
 import { useTypedSelector } from '@/hooks/useTypedSelector'
@@ -12,15 +13,21 @@ const Favorit: FC = () => {
 
 	return (
 		<div className={styles.favorit}>
-			<div className={styles.head}>
-				<Heading>Избранное</Heading>
-				<span>Избранные продукты: {favorites.length}</span>
-			</div>
-			<div className={styles.wrapper}>
-				{favorites.map(item => (
-					<CardItem item={item} key={item.id} />
-				))}
-			</div>
+			{favorites.length ? (
+				<>
+					<div className={styles.head}>
+						<Heading>Избранное</Heading>
+						<span>Избранные продукты: {favorites.length}</span>
+					</div>
+					<div className={styles.wrapper}>
+						{favorites.map(item => (
+							<CardItem item={item} key={item.id} />
+						))}
+					</div>
+				</>
+			) : (
+				<Empty title={'Избранное пусто'} />
+			)}
 		</div>
 	)
 }
