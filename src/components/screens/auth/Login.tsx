@@ -3,7 +3,6 @@ import { FC, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import { AiOutlineEye, AiTwotoneEyeInvisible } from 'react-icons/ai'
 import { BiLogIn } from 'react-icons/bi'
-import { Link } from 'react-router-dom'
 
 import Button from '@/ui/button/Button'
 import Field from '@/ui/field/Field'
@@ -34,18 +33,13 @@ const Login: FC = () => {
 			<div className={styles.content}>
 				<h1>Вход в аккаунт</h1>
 				<div>
-					<p>
-						Уважаемый пользователь, если вы не зарегистрированы, нажмите кнопку
-					</p>
-					<Link className={styles.link} to='register'>
-						Регистрация!
-					</Link>
+					<p>Войдите в аккаунт</p>
 				</div>
 			</div>
 			<form className={styles.form} onSubmit={handleSubmit(onSubmitHandler)}>
 				<div className={styles.wrapper}>
 					<div>
-						<label htmlFor='tel'>Ваш логин</label>
+						<label htmlFor='tel'>Ваш номер</label>
 						<div className={styles.iconInput}>
 							<Field
 								{...register('tel', {

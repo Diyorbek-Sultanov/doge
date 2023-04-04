@@ -39,7 +39,7 @@
 
 		.form {
 			.wrapper {
-				@apply flex gap-x-7 mb-14;
+				@apply flex flex-wrap gap-x-7 mb-14;
 				> div {
 					@apply w-[260px];
 
@@ -48,7 +48,7 @@
 					}
 
 					.iconInput {
-						@apply relative mt-2;
+						@apply relative mt-2 mb-3;
 						.input {
 							@apply w-full outline-none bg-secondary rounded-[53px] text-text-sm font-normal py-[14px] px-9;
 						}

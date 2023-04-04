@@ -3,8 +3,9 @@ import { Route, Routes } from 'react-router-dom'
 
 import Layout from '@/components/layout/Layout'
 
-import AuthLayout from '@/screens/account/AuthLayout'
-import Login from '@/screens/account/Login'
+import AuthLayout from '@/screens/auth/AuthLayout'
+import Login from '@/screens/auth/Login'
+import Register from '@/screens/auth/Register'
 import Cart from '@/screens/cart/Cart'
 import Catalog from '@/screens/catalog/Catalog'
 import Delivery from '@/screens/delivery/Delivery'
@@ -28,6 +29,7 @@ const App: FC = () => {
 				<Route path='cart' element={<Cart />} />
 				<Route path='auth' element={<AuthLayout />}>
 					<Route path='login' element={<Login />} />
+					<Route path='register' element={<Register />} />
 				</Route>
 			</Route>
 		</Routes>
