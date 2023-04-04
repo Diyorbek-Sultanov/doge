@@ -12,6 +12,8 @@ import CatalogSelect from './catalogSelect/CatalogSelect'
 const Catalog: FC = () => {
 	const { name } = useParams<{ name?: string }>()
 
+	console.log(name)
+
 	return (
 		<>
 			<Location />

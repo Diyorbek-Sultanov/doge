@@ -1,0 +1,80 @@
+.layout {
+	@apply grid grid-cols-productDetailGrid gap-x-6 mb-24;
+
+	.sidebar {
+		@apply bg-white rounded-md p-10;
+
+		.info {
+			@apply mb-7;
+
+			> h3 {
+				@apply font-semibold text-text-md mb-2;
+			}
+
+			> p {
+				@apply text-text-xs mb-5;
+			}
+		}
+	}
+
+	.link {
+		@apply text-text-sm font-bold mb-4 hover:text-orange transition-colors;
+	}
+
+	.login {
+		@apply py-[70px] px-[60px] bg-white rounded-md;
+
+		.content {
+			> h1 {
+				@apply text-text-4xl font-semibold mb-3;
+			}
+
+			> div {
+				@apply mb-7;
+				> p {
+					@apply text-text-sm font-normal;
+				}
+			}
+		}
+
+		.form {
+			.wrapper {
+				@apply flex gap-x-7 mb-14;
+				> div {
+					@apply w-[260px];
+
+					> label {
+						@apply text-text-xs font-normal mb-2 text-center;
+					}
+
+					.iconInput {
+						@apply relative mt-2;
+						.input {
+							@apply w-full outline-none bg-secondary rounded-[53px] text-text-sm font-normal py-[14px] px-9;
+						}
+
+						.inputErr {
+							@apply border border-error;
+						}
+
+						.icon {
+							@apply absolute top-4 right-4 z-10 cursor-pointer;
+						}
+
+						.iconLogIn {
+							@apply absolute top-4 left-4 z-10 cursor-pointer;
+						}
+					}
+				}
+			}
+
+			.btn {
+				@apply w-[355px] font-semibold text-text-md py-6 px-4 bg-orange cursor-pointer disabled:bg-secondary disabled:text-gray;
+
+				&:hover {
+					background-color: lighten(#ec3b22, 10%);
+				}
+			}
+		}
+	}
+}

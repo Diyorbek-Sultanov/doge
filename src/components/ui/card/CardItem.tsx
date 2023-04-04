@@ -4,6 +4,7 @@ import { AiOutlineClose } from 'react-icons/ai'
 import { FiBookmark } from 'react-icons/fi'
 import { IoBag } from 'react-icons/io5'
 import { RiShoppingBagLine } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 
 import { ICardSlider } from '@/components/screens/home/cardSlider/cardSlider.interface'
 
@@ -13,7 +14,7 @@ import { useTypedSelector } from '@/hooks/useTypedSelector'
 import styles from './cardItem.module.scss'
 
 const CardSliderItem: FC<{ item: ICardSlider }> = ({ item }) => {
-	const { addFavorit, removeFavorit, addToCart } = useActions()
+	const { addFavorit, removeFavorit, addToCart, removeToCart } = useActions()
 	const { favorites } = useTypedSelector(state => state.favorit)
 	const { cart } = useTypedSelector(state => state.cart)
 
@@ -44,7 +45,9 @@ const CardSliderItem: FC<{ item: ICardSlider }> = ({ item }) => {
 
 	return (
 		<div className={styles.item}>
-			<img src={item.img} alt={item.name} />
+			<Link to={item.slug}>
+				<img src={item.img} alt={item.name} />
+			</Link>
 
 			{findFavorit ? (
 				<div
@@ -59,7 +62,12 @@ const CardSliderItem: FC<{ item: ICardSlider }> = ({ item }) => {
 				</div>
 			)}
 			{isExistsCart ? (
-				<IoBag className={styles.icon} fontSize={20} fill='#999' />
+				<IoBag
+					className={styles.icon}
+					onClick={() => removeToCart({ id: item.id })}
+					fontSize={20}
+					fill='#999'
+				/>
 			) : (
 				<RiShoppingBagLine
 					className={styles.icon}

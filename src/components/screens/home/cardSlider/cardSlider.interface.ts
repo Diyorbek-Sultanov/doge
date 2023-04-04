@@ -4,4 +4,5 @@ export interface ICardSlider {
 	name: string
 	price: number
 	count: number
+	slug: string
 }

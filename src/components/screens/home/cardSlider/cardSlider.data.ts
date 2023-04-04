@@ -11,55 +11,63 @@ export const cardSliderData: ICardSlider[] = [
 		img: Watch,
 		name: 'Iphone 13 pro MAX 256Gb',
 		price: 16000000,
-		count: 1
+		count: 1,
+		slug: 'iphone-13-pro-MAX-256Gb'
 	},
 	{
 		id: 1,
 		img: Milka,
 		name: 'Iphone 13 pro MAX 256Gb',
 		price: 16000000,
-		count: 1
+		count: 1,
+		slug: 'iphone-13-pro-MAX-256Gb'
 	},
 	{
 		id: 2,
 		img: Toster,
 		name: 'Iphone 13 pro MAX 256Gb',
 		price: 16000000,
-		count: 1
+		count: 1,
+		slug: 'iphone-13-pro-MAX-256Gb'
 	},
 	{
 		id: 3,
 		img: KirMashina,
 		name: 'Iphone 13 pro MAX 256Gb',
 		price: 16000000,
-		count: 1
+		count: 1,
+		slug: 'iphone-13-pro-MAX-256Gb'
 	},
 	{
 		id: 4,
 		img: Watch,
 		name: 'Iphone 13 pro MAX 256Gb',
 		price: 16000000,
-		count: 1
+		count: 1,
+		slug: 'iphone-13-pro-MAX-256Gb'
 	},
 	{
 		id: 5,
 		img: Milka,
 		name: 'Iphone 13 pro MAX 256Gb',
 		price: 16000000,
-		count: 1
+		count: 1,
+		slug: 'iphone-13-pro-MAX-256Gb'
 	},
 	{
 		id: 6,
 		img: Toster,
 		name: 'Iphone 13 pro MAX 256Gb',
 		price: 16000000,
-		count: 1
+		count: 1,
+		slug: 'iphone-13-pro-MAX-256Gb'
 	},
 	{
 		id: 7,
 		img: KirMashina,
 		name: 'Iphone 13 pro MAX 256Gb',
 		price: 16000000,
-		count: 1
+		count: 1,
+		slug: 'iphone-13-pro-MAX-256Gb'
 	}
 ]

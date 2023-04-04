@@ -23,9 +23,9 @@ const Header: FC = () => {
 
 					<ul className={styles.list}>
 						<li>Карта сайта</li>
-						<Link to='/payment'>Платёжная система</Link>
-						<Link to='/delivery'>Служба доставки</Link>
-						<Link to='/help'>Помощь</Link>
+						<Link to='payment'>Платёжная система</Link>
+						<Link to='delivery'>Служба доставки</Link>
+						<Link to='help'>Помощь</Link>
 					</ul>
 				</div>
 				<Contact />
@@ -49,14 +49,19 @@ const Header: FC = () => {
 					<div className={styles.iconList}>
 						<NavLink
 							className={({ isActive }) => (isActive ? 'active-link' : '')}
-							to='/favorit'
+							to='favorit'
 						>
 							<BsBookmark cursor='pointer' fontSize={22} />
 						</NavLink>
-						<AiOutlineUser cursor='pointer' fontSize={22} />
 						<NavLink
 							className={({ isActive }) => (isActive ? 'active-link' : '')}
-							to='/cart'
+							to='auth/login'
+						>
+							<AiOutlineUser cursor='pointer' fontSize={22} />
+						</NavLink>
+						<NavLink
+							className={({ isActive }) => (isActive ? 'active-link' : '')}
+							to='cart'
 						>
 							<RiShoppingBagLine cursor='pointer' fontSize={22} />
 						</NavLink>

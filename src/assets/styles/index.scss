@@ -29,6 +29,10 @@ body {
 	}
 }
 
+.active-account {
+	@apply text-text-sm font-bold mb-4 text-orange;
+}
+
 ::-webkit-scrollbar {
 	width: 5px;
 	border-radius: 16px;
