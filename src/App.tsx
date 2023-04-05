@@ -17,6 +17,8 @@ import Home from '@/screens/home/Home'
 import Payment from '@/screens/payment/Payment'
 import ProductDetail from '@/screens/productDetail/ProductDetail'
 
+import PrivateRouter from './router/private.router'
+
 const App: FC = () => {
 	return (
 		<Routes>
@@ -24,6 +26,7 @@ const App: FC = () => {
 				<Route index element={<Home />} />
 				<Route path='catalog/:name' element={<Catalog />} />
 				<Route path='catalog/:name/:slug' element={<ProductDetail />} />
+				<Route path=':slug' element={<ProductDetail />} />
 				<Route path='payment' element={<Payment />} />
 				<Route path='delivery' element={<Delivery />} />
 				<Route path='help' element={<Help />} />
@@ -33,7 +36,14 @@ const App: FC = () => {
 					<Route path='login' element={<Login />} />
 					<Route path='register' element={<Register />} />
 				</Route>
-				<Route path='account' element={<AccountLayout />}>
+				<Route
+					path='account'
+					element={
+						<PrivateRouter>
+							<AccountLayout />
+						</PrivateRouter>
+					}
+				>
 					<Route path='profil' element={<Profil />} />
 				</Route>
 			</Route>

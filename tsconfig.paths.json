@@ -7,6 +7,7 @@
 			"@/screens/*": ["components/screens/*"],
 			"@/layout": ["components/layout/*"],
 			"@/hooks/*": ["hooks/*"],
+			"@/router/*": ["router/*"],
 			"@/services/*": ["services/*"],
 			"@/store/*": ["store/*"],
 			"@/assets/*": ["./assets/*"],
