@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { toast } from 'react-hot-toast'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { BiTrash } from 'react-icons/bi'
 import { BsBookmark } from 'react-icons/bs'
@@ -11,6 +12,16 @@ import styles from './cart.module.scss'
 
 const CartItem: FC<{ item: ICardSlider }> = ({ item }) => {
 	const { removeToCart, changeQuantity, addFavorit } = useActions()
+
+	const onClickFavorit = () => {
+		addFavorit(item)
+		toast.success('Добавлено в избранное', {
+			style: {
+				backgroundColor: '#333',
+				color: '#fff'
+			}
+		})
+	}
 
 	return (
 		<div className={styles.item}>
@@ -25,7 +36,7 @@ const CartItem: FC<{ item: ICardSlider }> = ({ item }) => {
 			</div>
 			<div className={styles.change}>
 				<div className={styles.icons}>
-					<BsBookmark cursor='pointer' onClick={() => addFavorit(item)} />
+					<BsBookmark cursor='pointer' onClick={onClickFavorit} />
 					<BiTrash
 						cursor='pointer'
 						onClick={() => removeToCart({ id: item.id })}

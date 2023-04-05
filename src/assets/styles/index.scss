@@ -29,8 +29,12 @@ body {
 	}
 }
 
-.active-account {
+.active-auth {
 	@apply text-text-sm font-bold mb-4 text-orange;
+}
+
+.active-account {
+	@apply text-text-md font-semibold text-orange flex items-center gap-x-3 mb-5;
 }
 
 ::-webkit-scrollbar {

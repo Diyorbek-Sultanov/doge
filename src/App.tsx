@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 
 import Layout from '@/components/layout/Layout'
 
+import AccountLayout from '@/screens/account/AccountLayout'
+import Profil from '@/screens/account/Profil'
 import AuthLayout from '@/screens/auth/AuthLayout'
 import Login from '@/screens/auth/Login'
 import Register from '@/screens/auth/Register'
@@ -30,6 +32,9 @@ const App: FC = () => {
 				<Route path='auth' element={<AuthLayout />}>
 					<Route path='login' element={<Login />} />
 					<Route path='register' element={<Register />} />
+				</Route>
+				<Route path='account' element={<AccountLayout />}>
+					<Route path='profil' element={<Profil />} />
 				</Route>
 			</Route>
 		</Routes>

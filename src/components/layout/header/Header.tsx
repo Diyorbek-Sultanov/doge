@@ -55,7 +55,7 @@ const Header: FC = () => {
 						</NavLink>
 						<NavLink
 							className={({ isActive }) => (isActive ? 'active-link' : '')}
-							to='auth/login'
+							to='account/profil'
 						>
 							<AiOutlineUser cursor='pointer' fontSize={22} />
 						</NavLink>

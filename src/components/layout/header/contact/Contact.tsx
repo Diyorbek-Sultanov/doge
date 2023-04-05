@@ -1,6 +1,9 @@
 import clsx from 'clsx'
 import { FC, useState } from 'react'
 import { IoLanguageSharp } from 'react-icons/io5'
+import { useNavigate } from 'react-router-dom'
+
+import Button from '@/ui/button/Button'
 
 import { useOutside } from '@/hooks/useOutside'
 
@@ -13,6 +16,7 @@ import { langData } from './contact.data'
 const Contact: FC = () => {
 	const [active, setActive] = useState('')
 	const { isShow, ref, setIsShow } = useOutside(false)
+	const navigate = useNavigate()
 
 	return (
 		<div className={styles.contact}>
@@ -39,6 +43,9 @@ const Contact: FC = () => {
 			)}
 			<p>+998 71 123-45-67</p>
 			<p>1201</p>
+			<Button className={styles.btn} onClick={() => navigate('auth/login')}>
+				Войти
+			</Button>
 		</div>
 	)
 }

@@ -15,18 +15,14 @@ const Sidebar: FC = () => {
 				<p>Risk more than others think is safe.</p>
 			</div>
 			<NavLink
-				className={({ isActive }) =>
-					isActive ? 'active-account' : styles.link
-				}
+				className={({ isActive }) => (isActive ? 'active-auth' : styles.link)}
 				to='login'
 			>
 				Логин
 			</NavLink>
 			<br />
 			<NavLink
-				className={({ isActive }) =>
-					isActive ? 'active-account' : styles.link
-				}
+				className={({ isActive }) => (isActive ? 'active-auth' : styles.link)}
 				to='register'
 			>
 				Регистрация

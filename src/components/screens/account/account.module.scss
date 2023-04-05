@@ -1,0 +1,77 @@
+.layout {
+	@apply grid grid-cols-productDetailGrid gap-x-6 mb-24;
+
+	.sidebar {
+		@apply bg-white rounded-md p-10 flex justify-center max-h-[550px];
+
+		.avatar {
+			@apply w-[110px] h-[110px] rounded-full bg-gray mb-2 p-[39px] relative;
+
+			> img {
+				position: absolute;
+				top: 50%;
+				left: 38px;
+				transform: translateY(-50%);
+			}
+		}
+
+		h3 {
+			@apply font-semibold text-text-md mb-5;
+		}
+
+		.list {
+			@apply mb-20;
+
+			.link {
+				@apply flex items-center gap-x-3 text-text-sm font-normal mb-5;
+			}
+		}
+
+		.btn {
+			@apply text-black text-text-sm font-normal cursor-pointer flex items-center gap-x-3;
+		}
+	}
+
+	.account {
+		@apply bg-white rounded-md px-[53px] py-6;
+
+		> h3 {
+			@apply text-text-md font-semibold mb-9;
+		}
+
+		.head {
+			@apply flex gap-x-8 mb-10;
+
+			.avatar {
+				@apply w-[110px] h-[110px] rounded-full bg-gray mb-2 p-[39px] relative;
+
+				> img {
+					position: absolute;
+					top: 50%;
+					left: 38px;
+					transform: translateY(-50%);
+				}
+			}
+
+			> h3 {
+				@apply font-semibold text-text-md mt-3;
+			}
+		}
+
+		.personData {
+			@apply flex items-center gap-5 flex-wrap mb-14;
+
+			> div {
+				@apply w-[260px];
+
+				> span {
+					@apply text-text-xs text-gray;
+				}
+
+				> p {
+					@apply mt-4 text-text-sm bg-secondary py-[14px] pl-[21px] pr-6 rounded-[53px];
+				}
+			}
+		}
+	}
+}

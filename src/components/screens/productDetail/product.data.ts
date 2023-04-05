@@ -7,10 +7,10 @@ import Iphone from '@/assets/images/iphone.png'
 import { IProductDetail } from './product.interface'
 
 export const productData: IProductDetail = {
+	id: 1,
 	brand: 'Apple',
 	camera: '14Mpx',
 	dioganal: '6.7',
-	img: Iphone,
 	images: [
 		{
 			smallImg: Iphone

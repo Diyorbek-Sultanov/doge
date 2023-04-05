@@ -46,7 +46,7 @@
 		}
 
 		.contact {
-			@apply flex items-center gap-x-3 relative;
+			@apply flex items-center gap-x-4 relative;
 
 			> span {
 				@apply flex items-center gap-x-2 cursor-pointer select-none opacity-60 hover:opacity-100;
@@ -70,6 +70,10 @@
 
 			> p {
 				@apply opacity-60;
+			}
+
+			.btn {
+				@apply cursor-pointer text-black bg-white rounded-md py-2 px-3;
 			}
 		}
 	}

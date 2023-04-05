@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import { AiOutlineCheck } from 'react-icons/ai'
-import { BiShoppingBag } from 'react-icons/bi'
 import { BsBagPlus, BsBookmark } from 'react-icons/bs'
 
 import Button from '@/ui/button/Button'
@@ -17,10 +16,6 @@ const ProductOrder: FC = () => {
 					<Button className={styles.btnCart}>
 						<BsBagPlus fontSize={16} />
 						add to cart
-					</Button>
-					<Button className={styles.btnBuy}>
-						<BiShoppingBag fontSize={16} />
-						buy one click
 					</Button>
 				</div>
 				<div className={styles.favorit}>
