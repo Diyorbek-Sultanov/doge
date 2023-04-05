@@ -3,7 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 
 import Layout from '@/components/layout/Layout'
 
+import AccountFavorit from '@/screens/account/AccountFavorit'
 import AccountLayout from '@/screens/account/AccountLayout'
+import AccoutCart from '@/screens/account/AccoutCart'
+import Edit from '@/screens/account/Edit'
 import Profil from '@/screens/account/Profil'
 import AuthLayout from '@/screens/auth/AuthLayout'
 import Login from '@/screens/auth/Login'
@@ -45,6 +48,9 @@ const App: FC = () => {
 					}
 				>
 					<Route path='profil' element={<Profil />} />
+					<Route path='cart' element={<AccoutCart />} />
+					<Route path='favorit' element={<AccountFavorit />} />
+					<Route path='edit' element={<Edit />} />
 				</Route>
 			</Route>
 		</Routes>
