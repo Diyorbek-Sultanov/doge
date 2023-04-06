@@ -1,5 +1,5 @@
 .layout {
-	@apply grid grid-cols-productDetailGrid gap-x-6 mb-24;
+	@apply grid grid-cols-productDetailGrid gap-x-6 mb-24 relative;
 
 	.sidebar {
 		@apply bg-white rounded-md p-10 flex justify-center max-h-[550px];
@@ -40,7 +40,7 @@
 		}
 
 		.head {
-			@apply flex gap-x-8 mb-10;
+			@apply flex gap-x-8 mb-10 relative;
 
 			.avatar {
 				@apply w-[110px] h-[110px] rounded-full bg-gray mb-2 p-[39px] relative;
@@ -55,6 +55,10 @@
 
 			> h3 {
 				@apply font-semibold text-text-md mt-3;
+			}
+
+			.icon {
+				@apply absolute bottom-4 left-20 bg-orange rounded-full py-[7px] px-3 cursor-pointer;
 			}
 		}
 
@@ -73,5 +77,68 @@
 				}
 			}
 		}
+
+		.btns {
+			@apply flex items-center gap-x-5;
+			.btnOrange {
+				@apply w-64 bg-orange cursor-pointer text-text-md font-semibold py-6 px-3 rounded-md;
+
+				&:hover {
+					background-color: lighten(#ec3b22, 10%);
+				}
+			}
+
+			.btnWhite {
+				@apply w-64 bg-secondary cursor-pointer text-text-md font-semibold py-6 px-3 text-black rounded-md;
+
+				&:hover {
+					background-color: darken(#e9e9e9, 10%);
+				}
+			}
+		}
+	}
+
+	.modal {
+		@apply fixed inset-0 z-0 hidden bg-modal;
+
+		.wrapper {
+			@apply w-full h-1/2 flex items-center justify-center translate-y-1/2;
+		}
+
+		.content {
+			@apply max-w-[495px] p-10 bg-white rounded-lg;
+
+			> h1 {
+				@apply text-text-2xl font-bold mb-1;
+			}
+
+			> p {
+				@apply text-text-sm mb-11;
+			}
+
+			.btns {
+				@apply flex items-center gap-x-3;
+
+				.btnOrange {
+					@apply text-text-md font-semibold bg-orange cursor-pointer py-4 px-8 rounded-full;
+
+					&:hover {
+						background-color: darken(#ec3b22, 5%);
+					}
+				}
+
+				.btnBlack {
+					@apply text-text-md font-semibold bg-black text-white cursor-pointer py-4 px-8 rounded-full;
+
+					&:hover {
+						background-color: darken(#2f2f2f, 10%);
+					}
+				}
+			}
+		}
+	}
+
+	.modalOpen {
+		@apply z-30 block;
 	}
 }

@@ -36,7 +36,8 @@ module.exports = {
 				catShadow: '0px 24px 84px rgba(0, 0, 0, 0.12)'
 			},
 			backgroundColor: {
-				favorit: 'rgba(0, 0, 0, 0.09)'
+				favorit: 'rgba(0, 0, 0, 0.09)',
+				modal: 'rgba(0, 0, 0, .6)'
 			},
 			gridTemplateColumns: {
 				productDetailGrid: '9fr 3fr',
