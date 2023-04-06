@@ -1,4 +1,4 @@
-import { ChangeEvent, FC, useRef, useState } from 'react'
+import { ChangeEvent, FC, useEffect, useRef, useState } from 'react'
 import { AiOutlinePicture } from 'react-icons/ai'
 
 import Button from '@/ui/button/Button'
@@ -11,13 +11,32 @@ import styles from './account.module.scss'
 
 const Edit: FC = () => {
 	const ref = useRef<HTMLInputElement>(null)
-	const [imageUrl, setImageUrl] = useState('')
+	const [selectedAvatar, setSelectedAvatar] = useState<Blob>()
+	const [formData, setFormData] = useState({
+		avatar: ''
+	})
 
-	const handleChangeFile = (e: ChangeEvent<HTMLInputElement>) => {
+	useEffect(() => {
+		if (!selectedAvatar) {
+			setFormData({ ...formData, avatar: '' })
+			return
+		}
+
+		const objectUrl = URL.createObjectURL(selectedAvatar)
+
+		//DB call to save objectUrl into the DB
+
+		setFormData({ ...formData, avatar: objectUrl })
+
+		return () => URL.revokeObjectURL(objectUrl)
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [selectedAvatar])
+
+	const onSelectFile = (e: ChangeEvent<HTMLInputElement>) => {
 		const { files } = e.target
 		const selectedFile = files as FileList
 
-		console.log(selectedFile?.[0])
+		setSelectedAvatar(selectedFile?.[0])
 	}
 
 	return (
@@ -26,7 +45,7 @@ const Edit: FC = () => {
 				<h3>Персональные данные</h3>
 				<div className={styles.head}>
 					<div className={styles.avatar}>
-						<img src={imageUrl} alt='user' />
+						<img src={!formData.avatar ? User : formData.avatar} alt='user' />
 					</div>
 					<h3>Abbos Janizakov</h3>
 					<div className={styles.icon} onClick={() => ref.current?.click()}>
@@ -34,7 +53,7 @@ const Edit: FC = () => {
 					</div>
 				</div>
 				<input
-					onChange={handleChangeFile}
+					onChange={onSelectFile}
 					ref={ref}
 					type='file'
 					hidden
