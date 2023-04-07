@@ -145,4 +145,8 @@
 	.modalOpen {
 		@apply z-30 block;
 	}
+
+	.wrap {
+		@apply grid-cols-3;
+	}
 }

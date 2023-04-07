@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import Layout from '@/components/layout/Layout'
 
+import NotFound from '@/screens/404/NotFound'
 import AccountFavorit from '@/screens/account/AccountFavorit'
 import AccountLayout from '@/screens/account/AccountLayout'
 import AccoutCart from '@/screens/account/AccoutCart'
@@ -29,7 +30,7 @@ const App: FC = () => {
 				<Route index element={<Home />} />
 				<Route path='catalog/:name' element={<Catalog />} />
 				<Route path='catalog/:name/:slug' element={<ProductDetail />} />
-				<Route path=':slug' element={<ProductDetail />} />
+				{/*<Route path=':slug' element={<ProductDetail />} />*/}
 				<Route path='payment' element={<Payment />} />
 				<Route path='delivery' element={<Delivery />} />
 				<Route path='help' element={<Help />} />
@@ -52,6 +53,7 @@ const App: FC = () => {
 					<Route path='favorit' element={<AccountFavorit />} />
 					<Route path='edit' element={<Edit />} />
 				</Route>
+				<Route path='*' element={<NotFound />} />
 			</Route>
 		</Routes>
 	)

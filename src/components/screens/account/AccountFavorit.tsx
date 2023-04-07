@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import { FC } from 'react'
 
 import CardItem from '@/ui/card/CardItem'
@@ -7,6 +8,8 @@ import Heading from '@/ui/heading/Heading'
 import { useTypedSelector } from '@/hooks/useTypedSelector'
 
 import styles from '../favorit/favorit.module.scss'
+
+import style from './account.module.scss'
 
 const Favorit: FC = () => {
 	const { favorites } = useTypedSelector(state => state.favorit)
@@ -19,7 +22,7 @@ const Favorit: FC = () => {
 						<Heading>Избранное</Heading>
 						<span>Избранные продукты: {favorites.length}</span>
 					</div>
-					<div className={styles.wrapper}>
+					<div className={clsx(styles.wrapper, style.wrap)}>
 						{favorites.map(item => (
 							<CardItem item={item} key={item.id} />
 						))}

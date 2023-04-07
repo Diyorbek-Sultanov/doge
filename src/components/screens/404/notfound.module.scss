@@ -1,0 +1,15 @@
+.not {
+	@apply w-[50vw] bg-white rounded-md py-5 px-7 mb-14 text-center;
+
+	> h1 {
+		@apply text-text-5xl font-bold mb-3;
+	}
+
+	> p {
+		@apply text-text-md mb-5;
+	}
+
+	.btn {
+		@apply bg-error py-3 px-5 cursor-pointer text-text-md font-normal rounded-lg;
+	}
+}
