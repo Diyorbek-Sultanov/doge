@@ -1,5 +1,6 @@
 import { FC } from 'react'
 
+import BreadCrumb from '@/ui/breadcrumb/BreadCrumb'
 import Empty from '@/ui/empty/Empty'
 
 import { useTypedSelector } from '@/hooks/useTypedSelector'
@@ -15,6 +16,7 @@ const Cart: FC = () => {
 
 	return (
 		<div className={styles.cart}>
+			<BreadCrumb />
 			{cart.length ? (
 				<div className={styles.wrapper}>
 					<div className={styles.itemWrapper}>

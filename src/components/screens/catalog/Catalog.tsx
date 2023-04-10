@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { useParams } from 'react-router-dom'
 
+import BreadCrumb from '@/ui/breadcrumb/BreadCrumb'
 import CardItem from '@/ui/card/CardItem'
-import Location from '@/ui/location/Location'
 
 import { cardSliderData } from '../home/cardSlider/cardSlider.data'
 
@@ -16,7 +16,7 @@ const Catalog: FC = () => {
 
 	return (
 		<>
-			<Location />
+			<BreadCrumb />
 			<div className={styles.catalog}>
 				<div className={styles.select}>
 					<CatalogSelect />

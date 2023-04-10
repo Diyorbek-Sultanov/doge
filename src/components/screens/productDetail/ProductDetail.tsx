@@ -1,5 +1,7 @@
 import { FC, useEffect } from 'react'
 
+import BreadCrumb from '@/ui/breadcrumb/BreadCrumb'
+
 import ProductInfo from './ProductInfo'
 import ProductOrder from './ProductOrder'
 import ProductTab from './ProductTab'
@@ -10,6 +12,7 @@ const ProductDetail: FC = () => {
 
 	return (
 		<div className={styles.product}>
+			<BreadCrumb />
 			<div className={styles.wrapper}>
 				<ProductInfo />
 				<ProductOrder />

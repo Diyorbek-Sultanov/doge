@@ -37,6 +37,14 @@ body {
 	@apply text-text-md font-semibold text-orange flex items-center gap-x-3 mb-5;
 }
 
+.bread-active {
+	@apply text-text-md text-black mr-2;
+}
+
+.bread {
+	@apply text-gray text-text-sm mr-2;
+}
+
 ::-webkit-scrollbar {
 	width: 5px;
 	border-radius: 16px;

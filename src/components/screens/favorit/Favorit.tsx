@@ -1,5 +1,6 @@
 import { FC } from 'react'
 
+import BreadCrumb from '@/ui/breadcrumb/BreadCrumb'
 import CardItem from '@/ui/card/CardItem'
 import Empty from '@/ui/empty/Empty'
 import Heading from '@/ui/heading/Heading'
@@ -13,6 +14,7 @@ const Favorit: FC = () => {
 
 	return (
 		<div className={styles.favorit}>
+			<BreadCrumb />
 			{favorites.length ? (
 				<>
 					<div className={styles.head}>

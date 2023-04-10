@@ -1,5 +1,9 @@
 .layout {
-	@apply grid grid-cols-productDetailGrid gap-x-6 mb-24 relative;
+	@apply mb-24 relative;
+
+	.layouWrapper {
+		@apply grid grid-cols-productDetailGrid gap-x-6;
+	}
 
 	.sidebar {
 		@apply bg-white rounded-md p-10 flex justify-center max-h-[550px];

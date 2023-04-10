@@ -30,7 +30,6 @@ const App: FC = () => {
 				<Route index element={<Home />} />
 				<Route path='catalog/:name' element={<Catalog />} />
 				<Route path='catalog/:name/:slug' element={<ProductDetail />} />
-				{/*<Route path=':slug' element={<ProductDetail />} />*/}
 				<Route path='payment' element={<Payment />} />
 				<Route path='delivery' element={<Delivery />} />
 				<Route path='help' element={<Help />} />

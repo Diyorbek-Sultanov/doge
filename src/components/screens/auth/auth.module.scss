@@ -1,5 +1,9 @@
 .layout {
-	@apply grid grid-cols-productDetailGrid gap-x-6 mb-24;
+	@apply mb-24;
+
+	.layoutWrapper {
+		@apply grid grid-cols-productDetailGrid gap-x-6;
+	}
 
 	.sidebar {
 		@apply bg-white rounded-md p-10;
