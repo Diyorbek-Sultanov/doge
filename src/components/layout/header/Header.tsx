@@ -40,7 +40,6 @@ const Header: FC = () => {
 					<Category />
 					<div className={styles.field}>
 						<Field
-							type={'search'}
 							placeholder={'Поиск товаров'}
 							className={styles.search}
 						/>

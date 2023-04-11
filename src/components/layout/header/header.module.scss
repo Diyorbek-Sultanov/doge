@@ -53,7 +53,7 @@
 			}
 
 			.wrapper {
-				@apply absolute top-8 right-36 z-30 shadow-lg rounded-md bg-white text-black py-3 px-4;
+				@apply absolute top-8 left-3 z-30 shadow-lg rounded-md bg-white text-black py-3 px-4;
 				animation: scale 0.3s ease-in;
 
 				> ul {
