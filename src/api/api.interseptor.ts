@@ -7,7 +7,8 @@ import { errCatch, getContentType } from './api.helper'
 
 export const instance = axios.create({
 	baseURL: 'localhost://3000',
-	headers: getContentType()
+	headers: getContentType(),
+	withCredentials: true
 })
 
 instance.interceptors.request.use(config => {
